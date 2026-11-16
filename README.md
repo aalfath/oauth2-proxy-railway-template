@@ -1,3 +1,5 @@
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/new/template/oauth2-proxy?utm_medium=integration&utm_source=button&utm_campaign=oauth2-proxy)
+
 # OAuth2 Proxy on Railway
 
 Railway template for [OAuth2 Proxy](https://github.com/oauth2-proxy/oauth2-proxy) **v7.15.6**. It puts a Google, GitHub, Microsoft Entra ID or any OpenID Connect login in front of a service that already runs in your Railway project.
