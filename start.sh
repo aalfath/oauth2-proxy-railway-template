@@ -4,6 +4,11 @@
 # a service variable of the same name.
 set -eu
 
+# Treat empty OAUTH2_PROXY_* variables (optional template prompts left blank) as unset.
+for v in $(env | sed -n 's/^\(OAUTH2_PROXY_[A-Z0-9_]*\)=$/\1/p'); do
+  unset "$v"
+done
+
 # Listen on Railway's PORT.
 export OAUTH2_PROXY_HTTP_ADDRESS="${OAUTH2_PROXY_HTTP_ADDRESS:-0.0.0.0:${PORT:-4180}}"
 
